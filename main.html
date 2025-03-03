@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bocatada - Tienda de Bocadillos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #ff5722;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .bocadillo {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bocadillo button {
+            background: #ff5722;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .bocadillo button:hover {
+            background: #e64a19;
+        }
+        #carrito {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Ocultar el carrito por defecto */
+        }
+        #carrito h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+        }
+        #carrito ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #carrito p {
+            margin: 10px 0 0 0;
+        }
+        #toggle-carrito {
+            background: #ff5722;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        #toggle-carrito:hover {
+            background: #e64a19;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>La Bocatada</h1>
+    <p>No seas un pillo y coge tu bocadillo!</p>
+</header>
+
+<div class="container">
+
+    <h2>Carta de Bocadillos</h2>
+    <div id="bocadillos">
+        <div class="bocadillo">
+            <span>Bocadillo de Salchichón</span>
+            <button onclick="agregarAlCarrito('Bocadillo de Salchichón', 2.89)">Agregar - 2.89€</button>
+        </div>
+        <div class="bocadillo">
+            <span>Bocadillo de Pechuga de Pollo</span>
+            <button onclick="agregarAlCarrito('Bocadillo de Pechuga de Pollo', 2.89)">Agregar - 2.89€</button>
+        </div>
+        <div class="bocadillo">
+            <span>Bocadillo Chorizo</span>
+            <button onclick="agregarAlCarrito('Bocadillo Chorizo', 2.89)">Agregar - 2.89€</button>
+        </div>
+    </div>
+
+    <button id="toggle-carrito" onclick="toggleCarrito()">Mostrar/Ocultar Carrito</button>
+    
+    <div id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p id="total">Total: 0.00€</p>
+    </div>
+
+</div>
+
+<script>
+    let total = 0;
+
+    function agregarAlCarrito(nombre, precio) {
+        const listaCarrito = document.getElementById('lista-carrito');
+</html>
